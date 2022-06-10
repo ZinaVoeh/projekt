@@ -4,11 +4,10 @@ from urllib import request
 
 def createUser(request):
     neuerUser = request.GET
-    dateiNameUser = "./user/" + neuerUser["name"] + ".txt"
+    dateiNameUser =  "./main/user/" + neuerUser["name"] + ".txt"
 
     with open (dateiNameUser, "w") as datei:
         datei.write(json.dumps(neuerUser))
-
 
 '''def createBeitrag(request):
     neuerBeitrag = request.GET
